@@ -15,7 +15,7 @@ function App() {
         </nav>
         <Switch>
           <Route path={'/'} exact component={PokemonList}></Route>
-          <Route path={'/poke-list/:pokemon'} component={Pokemon}></Route>
+          <Route path={'/poke-list/:id'} component={Pokemon}></Route>
           <Redirect to={'/'}></Redirect>
         </Switch>
       

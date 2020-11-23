@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import _ from 'lodash';
 import { GetPokemonList } from '../modules/pokemon-basic-redux/actions-basic/pokemonActions_basic';
 import { Link } from 'react-router-dom';
+import './PokemonList.css' 
 const PokemonList = () => {
 
     const dispatch = useDispatch();
@@ -30,11 +31,17 @@ const PokemonList = () => {
                     <p>have data </p>
                     <br></br>
                     {
-                        pokemonList.data.results.map((el: any, index: any) => (
-                            <div key={index}>
+                        pokemonList.data.map((el: any, index: any) => (                        
+                            <div key={index}  className="list-wrapper">
+                                <div className='pokemon-item-2'>
                                 <br />
-                                <p> pokemon name is :{el.name}</p>
-                                <Link to={`/poke-list/${el.name}`}>View {index}</Link>
+                                <p> pokemon : {el.name}</p>
+                                {/* <span/> */}
+                                <div className='pokemon-item-3'>
+                                <Link to={`/poke-list/${(index+1)}`}>View {index}</Link>
+                                </div>
+                                </div>
+                                <br/>
                             </div>
 
                         ))

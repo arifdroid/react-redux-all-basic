@@ -1,0 +1,31 @@
+
+.list-wrapper{
+    width:90%;
+    margin: auto;
+    /* background-color: yellow; */
+    padding-bottom: 15px;
+    justify-content: space-between;
+  
+  }
+
+  .list-wrapper .pokemon-item{
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      border: thin solid coral;
+
+  }
+
+  .pokemon-item-2{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    border: 0.1px solid coral;
+    padding: 10px;
+
+}
+
+.pokemon-item-3{
+    margin-left: 30px;
+}
+  
