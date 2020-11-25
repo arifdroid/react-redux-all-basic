@@ -23,6 +23,27 @@ const Pokemon = (props :any) =>{
     
     const showData = ()=>{
         console.log('pokemon details is', pokemonDetails)
+         
+        let {name, height, weight , abilities} = pokemonDetails.data;
+        // let {} = pokemonDetails 
+
+        return(
+        <div>
+
+        <h1>name : {name}</h1>
+        <h3>height : {height}</h3>
+        <h3>weight : {weight}</h3>
+
+        <h3>abilities : {abilities.map((el:any, index:number)=>(
+            <div key={index}><p>{index} : {el.ability.name}</p></div>
+        ))}</h3>  
+
+        </div>
+
+            
+        
+        
+        )
     }
     // console.log('props pokemon passed ->', props )
 
